@@ -36,10 +36,11 @@ export default function Home() {
     });
 
 
-    const { redirect, id, error } = await response.json();
+    const { redirect, id: respId, error } = await response.json();
 
     setShortUrl(redirect);
     setLoading(false);
+    setId(respId);
 
     if(error) {
       setError(error);
