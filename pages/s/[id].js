@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import styles from '../../styles/Redirect.module.css';
 
-const apiEndpoint = `http://localhost:3000/api/url`
+const apiEndpoint = `${process.env.BASE_URL}/api/url`
 
 async function fetchRedirect(apiPath, id) {
 	const path = `${apiPath}/${id}`;
