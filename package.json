@@ -8,6 +8,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "firebase": "^8.2.0",
+    "is-url": "^1.2.4",
+    "nanoid": "^3.1.20",
     "next": "10.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1"

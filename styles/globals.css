@@ -9,6 +9,18 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+  color: #1f53f1;
+}
+
+button {
+  background-color:  #1f53f1;
+  color: #ffffff;
+  border: 0;
+  box-shadow: none;
+  border-radius: 0px;
+  min-width: 5.5rem;
+  padding: 0.5rem;
+  cursor: pointer;
 }
 
 * {
