@@ -10,7 +10,7 @@ export default function Home() {
   const [shortUrl, setShortUrl] = useState('');
   const [error, setError] = useState('');
 
-  const apiEndpoint = `${process.env.VERCEL_URL}/api/url`;
+  const apiEndpoint = `/api/url`;
 
   async function handleSubmit(e) {
     setError('');
@@ -20,6 +20,7 @@ export default function Home() {
 
     const id = nanoid(5);
     const path = `${apiEndpoint}/${id}`;
+    console.log('path-->', path);
 
     const data = {
       redirect: url,

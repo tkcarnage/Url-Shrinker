@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import styles from '../../styles/Redirect.module.css';
 
-const apiEndpoint = `api/url`
+const apiEndpoint = `${process.env.VERCEL_URL}api/url`
 
 async function fetchRedirect(apiPath, id) {
+	console.log('calling fetchRedirect', apiPath, apiEndpoint)
 	const path = `${apiPath}/${id}`;
 	const response = await fetch(path);
 	const { redirect: url, error } = await response.json();
