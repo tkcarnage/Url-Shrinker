@@ -8,6 +8,7 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [showShortUrl, setShowShortUrl] = useState(false);
   const [shortUrl, setShortUrl] = useState('');
+  const [id, setId] = useState('');
   const [error, setError] = useState('');
 
   const apiEndpoint = `/api/url`;
@@ -20,7 +21,6 @@ export default function Home() {
 
     const id = nanoid(5);
     const path = `${apiEndpoint}/${id}`;
-    console.log('path-->', path);
 
     const data = {
       redirect: url,
@@ -36,7 +36,7 @@ export default function Home() {
     });
 
 
-    const { redirect, error } = await response.json();
+    const { redirect, id, error } = await response.json();
 
     setShortUrl(redirect);
     setLoading(false);
@@ -44,12 +44,10 @@ export default function Home() {
     if(error) {
       setError(error);
     };
-    console.log('error-->', error);
     setShowShortUrl(true);
   }
 
   async function copyToClipboard(e) {
-    console.log('shortUrl-->', shortUrl);
     e.preventDefault();
     try {
       await navigator.clipboard.writeText(shortUrl)
@@ -101,7 +99,7 @@ export default function Home() {
                   :
                   <div>
                   <a 
-                    href="/"
+                    href={`/s/${id}`}
                     target="_blank"
                     rel="noopener noreferrer">
                     {shortUrl}

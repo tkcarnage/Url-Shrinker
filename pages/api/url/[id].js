@@ -11,7 +11,7 @@ export default async (req, res) => {
         if(isUrl(redirect)) {
             const resRef = await firebase.collection('urls').doc(id).set(data);
             const urlRedirectPath = shortUrlBasePath + id;
-            res.status(200).json({ redirect: urlRedirectPath });
+            res.status(200).json({ redirect: urlRedirectPath, id });
         } else {
             res.status(400).json({ error: 'Not A Valid Url' });
         }
