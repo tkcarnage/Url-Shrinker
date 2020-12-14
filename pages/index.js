@@ -101,7 +101,7 @@ export default function Home() {
                   :
                   <div>
                   <a 
-                    href={shortUrl}
+                    href="/"
                     target="_blank"
                     rel="noopener noreferrer">
                     {shortUrl}
