@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import styles from '../../styles/Redirect.module.css';
 
-const apiEndpoint = `${NEXT_PUBLIC_VERCEL_URL}/api/url`
+const apiEndpoint = `${process.env.NEXT_PUBLIC_VERCEL_URL}/api/url`
 
 async function fetchRedirect(apiPath, id) {
 	const path = `${apiPath}/${id}`;
