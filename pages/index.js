@@ -10,7 +10,7 @@ export default function Home() {
   const [shortUrl, setShortUrl] = useState('');
   const [error, setError] = useState('');
 
-  const apiEndpoint = `${NEXT_PUBLIC_VERCEL_URL}/api/url`;
+  const apiEndpoint = `${process.env.VERCEL_URL}/api/url`;
 
   async function handleSubmit(e) {
     setError('');
