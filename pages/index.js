@@ -49,7 +49,6 @@ export default function Home() {
 
   async function copyToClipboard(e) {
     e.preventDefault();
-    console.log('navigator.clipboard-->', navigator.clipboard);
     try {
       await navigator.clipboard.writeText(shortUrl)
     } catch (err) {
@@ -115,7 +114,7 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <a
-          href=""
+          href="https://github.com/tkcarnage/Url-Shrinker"
           target="_blank"
           rel="noopener noreferrer"
         >
