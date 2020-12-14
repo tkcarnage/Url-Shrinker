@@ -1,7 +1,7 @@
 import isUrl from 'is-url';
 import firebase from '../../../lib/firebase';
 
-const shortUrlBasePath = `http://localhost:3000/s/`
+const shortUrlBasePath = `${process.env.BASE_URL}/s/`
 
 export default async (req, res) => {
     const { id } = req.query
