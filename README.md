@@ -21,3 +21,9 @@ Basic Url Shortener using NextJs API and Firebase
 - React
 - NextJs
 - Firebase
+
+## TODO
+1. Add batch url processing.
+1. Add ability to save.
+1. Expire links.
+1. Click to highlight all of text on url.
