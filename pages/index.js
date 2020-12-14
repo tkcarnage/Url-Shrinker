@@ -49,6 +49,7 @@ export default function Home() {
   }
 
   async function copyToClipboard(e) {
+    console.log('shortUrl-->', shortUrl);
     e.preventDefault();
     try {
       await navigator.clipboard.writeText(shortUrl)
